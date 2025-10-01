@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Here - Life with Katelin</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <h2>Life with Katelin</h2>
+            </div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="links.html">Links</a></li>
+                <li><a href="start-here.html" class="active">Start Here</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="podcast-section">
+            <div class="container">
+                <div class="podcast-grid">
+                    <div class="podcast-content">
+                        <h2>Your Low-Tox Journey Starts Here</h2>
+                        <p>Welcome to Life with Katelin! I'm passionate about helping families make simple, sustainable swaps to reduce toxins in their everyday lives. Whether you're just beginning your low-tox journey or looking for practical tips to continue along the way, I'm here to guide you with easy swaps, honest product reviews, and real-life solutions that work for busy families. Let's create healthier homes together, one small change at a time.</p>
+                        <a href="links.html" class="btn btn-primary">EXPLORE RESOURCES</a>
+                    </div>
+                    <div class="podcast-image">
+                        <img src="images/startherepic.jpeg" alt="Katelin - OrganiMama" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-cards-section">
+            <div class="container">
+                <h2>Connect with Me</h2>
+                <div class="contact-cards-grid">
+                    <div class="contact-card instagram-card">
+                        <h3>Instagram</h3>
+                        <p>@lifewithkatelin</p>
+                        <p class="card-description">Daily low-tox tips, behind-the-scenes, and real-life moments</p>
+                        <a href="https://www.instagram.com/lifewithkatelin/" target="_blank" class="btn btn-secondary">Follow on Instagram</a>
+                    </div>
+                    
+                    <div class="contact-card tiktok-card">
+                        <h3>TikTok</h3>
+                        <p>@katelinsmomlife</p>
+                        <p class="card-description">Quick tips, product demos, and bite-sized education</p>
+                        <a href="https://www.tiktok.com/@katelinsmomlife?_t=ZT-8zwegDwnW7D&_r=1" target="_blank" class="btn btn-secondary">Follow on TikTok</a>
+                    </div>
+                    
+                    <div class="contact-card email-card">
+                        <h3>Email</h3>
+                        <p>katelinwentworth@gmail.com</p>
+                        <p class="card-description">Questions, collaborations, or just want to say hello</p>
+                        <a href="mailto:katelinwentworth@gmail.com" class="btn btn-secondary">Send Email</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+
+        
+        // Mobile menu toggle function
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('show');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navMenu = document.getElementById('navMenu');
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!navMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                navMenu.classList.remove('show');
+            }
+        });
+    </script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-center">
+                    <p class="copyright">©2024 Life with Katelin</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/lifewithkatelin/" target="_blank" class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@katelinsmomlife?_t=ZT-8zwegDwnW7D&_r=1" target="_blank" class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:katelinwentworth@gmail.com" class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        
+                    </div>
+                     <p class="made-by">Made by <a href="https://thefreewebsitewizards.com/" target="_blank">The Free Website Wizards</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navMenu').classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const navMenu = document.getElementById('navMenu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!navMenu.contains(e.target) && !toggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

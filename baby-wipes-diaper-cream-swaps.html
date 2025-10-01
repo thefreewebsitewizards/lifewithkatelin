@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Wipes & Diaper Cream Swaps That Actually Work | Life with Katelin</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional blog post specific styles */
+        .blog-post {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .blog-title {
+            font-size: 2.8rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .blog-meta {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+        
+        .blog-intro {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: var(--text-medium);
+            margin-bottom: 3rem;
+            font-style: italic;
+            text-align: center;
+        }
+        
+        .blog-content h3 {
+            color: var(--primary-color);
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.8rem;
+            line-height: 1.8;
+        }
+        
+        .product-section {
+            background: linear-gradient(135deg, var(--background-light) 0%, var(--accent-color) 100%);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2.5rem 0;
+        }
+        
+        .product-review {
+            background: white;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+        
+        .product-review:hover {
+            transform: translateY(-2px);
+        }
+        
+        .product-review h4 {
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .pros {
+            background: linear-gradient(135deg, #f0fff4 0%, #e8f5e8 100%);
+            border-left: 4px solid var(--green-soft);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .cons {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+            border-left: 4px solid var(--rose-accent);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .avoid-section {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            border-left: 4px solid #ffa726;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            border-radius: 0 12px 12px 0;
+        }
+        
+        .mom-comments {
+            background: var(--background-cream);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2.5rem 0;
+        }
+        
+        .mom-comment {
+            background: white;
+            border-left: 3px solid var(--accent-color);
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            position: relative;
+        }
+        
+        .mom-comment:before {
+            content: "";
+            font-size: 2rem;
+            color: var(--accent-color);
+            position: absolute;
+            left: 0.5rem;
+            top: -0.5rem;
+            opacity: 0.3;
+        }
+        
+        .final-thoughts {
+            border: 1px solid var(--border-light);
+            color: var(--text-medium);
+            padding: 2.5rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .final-thoughts h3 {
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+        
+        .final-thoughts p {
+            color: var(--text-medium);
+            margin-bottom: 0;
+        }
+        
+        .blog-tags {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-light);
+        }
+        
+        .tag {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--text-dark);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-right: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .back-to-blog {
+            display: inline-block;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-to-blog:hover {
+            color: var(--secondary-color);
+        }
+        
+        .discount-code {
+            background: linear-gradient(135deg, #e8f5e8 0%, var(--green-soft) 100%);
+            border: 2px dashed var(--primary-color);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 1rem 0;
+        }
+        
+        .ingredient-highlight {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2.2rem;
+            }
+            
+            .blog-intro {
+                font-size: 1.1rem;
+            }
+            
+            .blog-post {
+                padding: 2rem 1rem;
+            }
+            
+            .pros-cons {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .product-review,
+            .product-section,
+            .avoid-section,
+            .mom-comments,
+            .final-thoughts {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>Life with Katelin</h2>
+                </div>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+                <ul class="nav-menu" id="navMenu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="links.html">Links</a></li>
+                <li><a href="start-here.html">Start Here</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <a href="blog.html" class="back-to-blog">← Back to Blog</a>
+            
+            <div class="blog-layout">
+                <div class="blog-main">
+                    <article class="blog-post">
+                        <header class="blog-header">
+                            <h1 class="blog-title">Baby Wipes & Diaper Cream Swaps That Actually Work</h1>
+                            <div class="blog-meta">
+                                <span>By Kristen</span> • <span>February 1, 2024</span> • <span>8 min read</span>
+                            </div>
+                        </header>
+
+                        <div class="blog-intro">
+                            When I started my low-tox journey, baby products were one of the first things I tackled. Wipes and diaper creams touch your baby's most sensitive skin—so choosing clean, safe options is non-negotiable.
+                        </div>
+
+                        <div class="blog-content">
+                    <p>Here's what I've tried, loved, and recommend to other moms looking for affordable, effective swaps.</p>
+
+                    <div class="product-section">
+                        <h3>🧻 Wipes That Pass the Test</h3>
+                        
+                        <div class="product-review">
+                            <h4>✅ WaterWipes</h4>
+                            <div class="ingredient-highlight">
+                                <strong>Ingredients:</strong> 99.9% water + fruit extract
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros">
+                                    <strong>Pros:</strong>
+                                    <ul>
+                                        <li>Minimal ingredients</li>
+                                        <li>Widely available</li>
+                                        <li>Gentle on newborn skin</li>
+                                        <li>Great for sensitive or rash-prone babies</li>
+                                    </ul>
+                                </div>
+                                <div class="cons">
+                                    <strong>Cons:</strong>
+                                    <ul>
+                                        <li>Can dry out quickly</li>
+                                        <li>More expensive than conventional brands</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-review">
+                            <h4>✅ Hello Bello Wipes</h4>
+                            <div class="pros-cons">
+                                <div class="pros">
+                                    <strong>Pros:</strong>
+                                    <ul>
+                                        <li>Affordable and accessible</li>
+                                        <li>Plant-based and hypoallergenic</li>
+                                        <li>Cute packaging and eco-friendly vibes</li>
+                                        <li>Available at Walmart</li>
+                                    </ul>
+                                </div>
+                                <div class="cons">
+                                    <strong>Cons:</strong>
+                                    <ul>
+                                        <li>Some babies react to the light scent</li>
+                                        <li>Can be thin compared to other brands</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-review">
+                            <h4>✅ Honest Company Wipes</h4>
+                            <div class="pros-cons">
+                                <div class="pros">
+                                    <strong>Pros:</strong>
+                                    <ul>
+                                        <li>Clean ingredients and sturdy texture</li>
+                                        <li>Thick and durable</li>
+                                        <li>Great for travel bags</li>
+                                        <li>Multiple scent options including fragrance-free</li>
+                                    </ul>
+                                </div>
+                                <div class="cons">
+                                    <strong>Cons:</strong>
+                                    <ul>
+                                        <li>Slightly pricier</li>
+                                        <li>Can leave slight residue</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-section">
+                        <h3>🍑 Diaper Cream Swaps</h3>
+                        
+                        <div class="product-review">
+                            <h4>✅ Earth Mama Diaper Balm</h4>
+                            <div class="ingredient-highlight">
+                                <strong>Key Features:</strong> Organic, herbal, and cloth-diaper safe
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros">
+                                    <strong>Pros:</strong>
+                                    <ul>
+                                        <li>No petroleum, parabens, or synthetic fragrances</li>
+                                        <li>Smells earthy and calming</li>
+                                        <li>Cloth diaper safe</li>
+                                        <li>Works preventatively too</li>
+                                    </ul>
+                                </div>
+                                <div class="cons">
+                                    <strong>Cons:</strong>
+                                    <ul>
+                                        <li>Ointment texture (not cream)</li>
+                                        <li>Can be greasy</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-review">
+                            <h4>✅ Rowe Casa Organics Baby Bottom Cream</h4>
+                            <div class="discount-code">
+                                💰 Use code KATELIN20 for a discount
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros">
+                                    <strong>Pros:</strong>
+                                    <ul>
+                                        <li>Low-tox favorite in the mom community</li>
+                                        <li>Gentle, effective, and smells amazing</li>
+                                        <li>Small batch, high quality</li>
+                                        <li>Fast healing properties</li>
+                                    </ul>
+                                </div>
+                                <div class="cons">
+                                    <strong>Cons:</strong>
+                                    <ul>
+                                        <li>Online ordering only</li>
+                                        <li>Higher price point</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-review">
+                            <h4>✅ Tubby Todd All Over Ointment</h4>
+                            <div class="ingredient-highlight">
+                                <strong>Multipurpose:</strong> Works for diaper rash, eczema, and dry patches
+                            </div>
+                            <div class="pros-cons">
+                                <div class="pros">
+                                    <strong>Pros:</strong>
+                                    <ul>
+                                        <li>Clean formula and cult favorite for a reason</li>
+                                        <li>Multipurpose use</li>
+                                        <li>Thick, protective barrier</li>
+                                        <li>Fragrance-free option available</li>
+                                    </ul>
+                                </div>
+                                <div class="cons">
+                                    <strong>Cons:</strong>
+                                    <ul>
+                                        <li>Premium pricing</li>
+                                        <li>Can be too thick for summer use</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="avoid-section">
+                        <h3>⚠️ What We Avoid</h3>
+                        <ul style="margin: 1rem 0; padding-left: 2rem;">
+                            <li><strong>Desitin & Aquaphor:</strong> Often contain petroleum and synthetic fragrances</li>
+                            <li><strong>Scented wipes:</strong> Can cause irritation and disrupt baby's microbiome</li>
+                            <li><strong>"Natural" labels without transparency:</strong> Always check the ingredient list</li>
+                        </ul>
+                    </div>
+
+                    <div class="mom-comments">
+                        <h3>💬 Real Mom Wisdom</h3>
+                        
+                        <div class="mom-comment">
+                            "WaterWipes saved my baby's skin during a rash flare-up."
+                        </div>
+                        
+                        <div class="mom-comment">
+                            "Earth Mama balm is the only thing that worked for our cloth diapers."
+                        </div>
+                        
+                        <div class="mom-comment">
+                            "Tubby Todd cleared up eczema and diaper rash in one week!"
+                        </div>
+                    </div>
+
+                    <div class="final-thoughts">
+                        <h3>🧠 Final Thoughts</h3>
+                        <p>You don't need a cabinet full of creams and wipes—just a few clean, trusted staples. These swaps are gentle, effective, and won't break the bank.</p>
+                        
+                        <p>And remember: your baby's skin is precious. Every small change makes a big difference.</p>
+                    </div>
+                </div>
+
+                        <div class="blog-tags">
+                            <span class="tag">Baby Care</span>
+                            <span class="tag">Low-Tox Living</span>
+                            <span class="tag">Product Reviews</span>
+                            <span class="tag">Diapering</span>
+                            <span class="tag">Skincare</span>
+                            <span class="tag">Mom Life</span>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="blog-sidebar">
+                    <div class="related-posts">
+                        <h4>Related Posts</h4>
+                        <div class="related-posts-grid">
+                            <div class="related-post-card">
+                                <h5><a href="affordable-nontoxic-baby-laundry-detergents.html">Affordable Nontoxic Baby Laundry Detergents You'll Actually Love</a></h5>
+                                <p>Let's talk laundry! Those tiny clothes deserve better than Tide or Dreft. Here are the best low-tox options.</p>
+                            </div>
+                            <div class="related-post-card">
+                                <h5><a href="teething-medicine-swaps-what-worked.html">Teething & Medicine Swaps: What Worked for Us (and What Didn't)</a></h5>
+                                <p>Real mom-tested natural remedies for teething babies, from Camilia drops to Teeth Tamer.</p>
+                            </div>
+                            <div class="related-post-card">
+                                <h5><a href="tart-cherry-juice-sleep-game-changer.html">The Magic of Tart Cherry Juice: My Sleep Game-Changer</a></h5>
+                                <p>How tart cherry juice improved my sleep quality and helped me wake up refreshed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+ <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-center">
+                    <p class="copyright">©2024 Life with Katelin</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/lifewithkatelin/" target="_blank" class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@katelinsmomlife?_t=ZT-8zwegDwnW7D&_r=1" target="_blank" class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:katelinwentworth@gmail.com" class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        
+                    </div>
+                     <p class="made-by">Made by <a href="https://thefreewebsitewizards.com/" target="_blank">The Free Website Wizards</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navMenu').classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const navMenu = document.getElementById('navMenu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!navMenu.contains(e.target) && !toggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teething & Medicine Swaps: What Worked for Us (and What Didn't) | Life with Katelin</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional blog post specific styles */
+        .blog-post {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .blog-title {
+            font-size: 2.8rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .blog-meta {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+        
+        .blog-intro {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: var(--text-medium);
+            margin-bottom: 3rem;
+            font-style: italic;
+            text-align: center;
+        }
+        
+        .blog-content h3 {
+            color: var(--primary-color);
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.8rem;
+            line-height: 1.8;
+        }
+        
+        .what-worked {
+            background: linear-gradient(135deg, var(--background-light) 0%, var(--accent-color) 100%);
+            border-left: 4px solid var(--green-soft);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .what-avoided {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+            border-left: 4px solid var(--rose-accent);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .product-review {
+            background: white;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .product-review h4 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .mom-comments {
+            background: var(--background-cream);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .mom-comment {
+            background: white;
+            border-left: 3px solid var(--accent-color);
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            position: relative;
+        }
+        
+        .mom-comment:before {
+            content: "";
+            font-size: 2rem;
+            color: var(--accent-color);
+            position: absolute;
+            left: 0.5rem;
+            top: -0.5rem;
+            opacity: 0.3;
+        }
+        
+        .final-thoughts {
+            border: 1px solid var(--border-light);
+            color: var(--text-medium);
+            padding: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .final-thoughts h3 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .final-thoughts p {
+            color: var(--text-medium);
+            margin-bottom: 0;
+        }
+        
+        .blog-tags {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-light);
+        }
+        
+        .tag {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--text-dark);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-right: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+         .back-to-blog {
+            display: inline-block;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-to-blog:hover {
+            color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2.2rem;
+            }
+            
+            .blog-intro {
+                font-size: 1.1rem;
+            }
+            
+            .blog-post {
+                padding: 2rem 1rem;
+            }
+            
+            .what-worked,
+            .what-avoided,
+            .mom-comments,
+            .final-thoughts {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>Life with Katelin</h2>
+                </div>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+                <ul class="nav-menu" id="navMenu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="links.html">Links</a></li>
+                <li><a href="start-here.html">Start Here</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <a href="blog.html" class="back-to-blog">← Back to Blog</a>
+            
+            <div class="blog-layout">
+                <div class="blog-main">
+                    <article class="blog-post">
+                        <header class="blog-header">
+                            <h1 class="blog-title">Teething & Medicine Swaps: What Worked for Us (and What Didn't)</h1>
+                            <div class="blog-meta">
+                                <span>By Kristen</span> • <span>January 25, 2024</span> • <span>7 min read</span>
+                            </div>
+                        </header>
+
+                        <div class="blog-intro">
+                            If you've ever had a teething baby, you know the struggle: sleepless nights, endless drool, and the desperate search for anything that helps. I've been there—and like many semicrunchy moms, I wanted to find safe, low-tox options that actually work.
+                        </div>
+
+                        <div class="table-of-contents">
+                            <h3>What's in This Post</h3>
+                            <ul>
+                                <li><a href="#teething-signs">Signs Your Baby is Teething</a></li>
+                                <li><a href="#natural-remedies">Natural Remedies That Worked</a></li>
+                                <li><a href="#product-reviews">Detailed Product Reviews</a></li>
+                                <li><a href="#what-to-avoid">What We Avoided & Why</a></li>
+                                <li><a href="#mom-tips">Real Mom Tips & Comments</a></li>
+                                <li><a href="#final-thoughts">Final Thoughts</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="blog-content">
+                            <p>So I tried a bunch of swaps. Here's what made the cut (and what didn't).</p>
+
+                            <div id="teething-signs" class="highlight-box">
+                                <h3>Signs Your Baby is Teething</h3>
+                                <p>Before diving into remedies, here are the telltale signs we noticed:</p>
+                                <ul class="benefits-list">
+                                    <li>Excessive drooling (like, soaking through bibs)</li>
+                                    <li>Wanting to chew on everything</li>
+                                    <li>Disrupted sleep patterns</li>
+                                    <li>Increased fussiness, especially at night</li>
+                                    <li>Red, swollen, or tender gums</li>
+                                    <li>Changes in eating habits</li>
+                                </ul>
+                            </div>
+
+                            <div id="natural-remedies" class="what-worked">
+                                <h3>Natural Remedies That Actually Worked</h3>
+
+                            <div class="science-box">
+                                <h4>The Science Behind Natural Teething Relief</h4>
+                                    <p>Many natural remedies work by providing gentle numbing effects or anti-inflammatory properties. Homeopathic remedies like those in Camilia are designed to work with your baby's natural healing processes.</p>
+                                </div>
+
+                                <div class="product-review">
+                                    <h4>Frozen Washcloths & Teething Toys</h4>
+                                    <p>The simplest solutions are often the best. We kept clean washcloths in the freezer and rotated teething toys through the fridge.</p>
+                                    
+                                    <div class="pros-cons">
+                                        <div class="pros">
+                                            <h5>Pros:</h5>
+                                            <ul>
+                                                <li>Completely natural and safe</li>
+                                                <li>Provides immediate relief</li>
+                                                <li>No cost involved</li>
+                                                <li>Easy to clean and reuse</li>
+                                            </ul>
+                                        </div>
+                                        <div class="cons">
+                                            <h5>Cons:</h5>
+                                            <ul>
+                                                <li>Temporary relief only</li>
+                                                <li>Need to constantly rotate items</li>
+                                                <li>Can be messy with all the drool</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-review">
+                                    <h4>Breast Milk Popsicles</h4>
+                                    <p>Game changer! I froze breast milk in ice cube trays and let her gnaw on them in a mesh feeder.</p>
+                                    
+                                    <div class="pros-cons">
+                                        <div class="pros">
+                                            <h5>Pros:</h5>
+                                            <ul>
+                                                <li>Nutritious and familiar taste</li>
+                                                <li>Cold provides numbing relief</li>
+                                                <li>Uses excess pumped milk</li>
+                                                <li>Baby loves the taste</li>
+                                            </ul>
+                                        </div>
+                                        <div class="cons">
+                                            <h5>Cons:</h5>
+                                            <ul>
+                                                <li>Only works if breastfeeding</li>
+                                                <li>Can be messy</li>
+                                                <li>Need mesh feeders for safety</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="product-reviews" class="what-worked">
+                                <h3>Detailed Product Reviews</h3>
+                                
+                                <div class="product-review">
+                                    <h4>Camilia Teething Drops</h4>
+                                    <p>Gentle, homeopathic, and surprisingly effective. These were a lifesaver during those early teething days.</p>
+                                    
+                                    <div class="key-features">
+                                        <h5>Key Features:</h5>
+                                        <ul>
+                                            <li>Homeopathic formula with Chamomilla</li>
+                                            <li>No dyes, no artificial flavors</li>
+                                            <li>Single-dose vials for easy dosing</li>
+                                            <li>Sterile and preservative-free</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="pros-cons">
+                                        <div class="pros">
+                                            <h5>Pros:</h5>
+                                            <ul>
+                                                <li>Works quickly (within 15-20 minutes)</li>
+                                                <li>No side effects noticed</li>
+                                                <li>Easy to administer</li>
+                                                <li>Pediatrician approved</li>
+                                                <li>No artificial ingredients</li>
+                                            </ul>
+                                        </div>
+                                        <div class="cons">
+                                            <h5>Cons:</h5>
+                                            <ul>
+                                                <li>More expensive than conventional options</li>
+                                                <li>Single-use vials create waste</li>
+                                                <li>May make baby sleepy (some moms worry)</li>
+                                                <li>Not available in all stores</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-review">
+                                    <h4>✅ Hyland's Baby Teething Tablets & Gel</h4>
+                                    <p>We used both! The tablets were easy to give, and the gel helped with molars. My baby didn't fuss over the taste.</p>
+                                    
+                                    <div class="key-features">
+                                        <h5>🔑 Key Features:</h5>
+                                        <ul>
+                                            <li>Dissolves quickly on tongue</li>
+                                            <li>Natural active ingredients</li>
+                                            <li>Available in tablets and gel form</li>
+                                            <li>No artificial colors or flavors</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="pros-cons">
+                                        <div class="pros">
+                                            <h5>✅ Pros:</h5>
+                                            <ul>
+                                                <li>Tablets dissolve instantly</li>
+                                                <li>Gel provides targeted relief</li>
+                                                <li>Affordable and widely available</li>
+                                                <li>No taste resistance from baby</li>
+                                                <li>Can use both forms as needed</li>
+                                            </ul>
+                                        </div>
+                                        <div class="cons">
+                                            <h5>❌ Cons:</h5>
+                                            <ul>
+                                                <li>Gel can be messy to apply</li>
+                                                <li>Need to be careful with dosing</li>
+                                                <li>Some controversy around homeopathic remedies</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-review">
+                                    <h4>✅ Teeth Tamer by Earthley Wellness</h4>
+                                    <p>This one felt like magic. Our pediatrician was supportive of trying natural remedies, and this helped us avoid reaching for Tylenol every time.</p>
+                                    
+                                    <div class="key-features">
+                                        <h5>🔑 Key Features:</h5>
+                                        <ul>
+                                            <li>Herbal tincture with organic ingredients</li>
+                                            <li>Contains chamomile, catnip, and fennel</li>
+                                            <li>Alcohol-free glycerin base</li>
+                                            <li>Made by a trusted wellness company</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="pros-cons">
+                                        <div class="pros">
+                                            <h5>✅ Pros:</h5>
+                                            <ul>
+                                                <li>Incredibly effective for pain relief</li>
+                                                <li>All organic, clean ingredients</li>
+                                                <li>Helped reduce Tylenol dependency</li>
+                                                <li>Sweet taste babies don't mind</li>
+                                                <li>Saved many sleepless nights</li>
+                                            </ul>
+                                        </div>
+                                        <div class="cons">
+                                            <h5>❌ Cons:</h5>
+                                            <ul>
+                                                <li>More expensive than drugstore options</li>
+                                                <li>Need to order online</li>
+                                                <li>Some pediatricians may not be familiar</li>
+                                                <li>Takes longer to work than conventional medicine</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="what-to-avoid" class="what-avoided">
+                                <h3>⚠️ What We Avoided or Used Sparingly</h3>
+                                
+                                <div class="product-review">
+                                    <h4>❌ Tylenol & Ibuprofen</h4>
+                                    <p>We kept these as a last resort. If we did use them, we chose dye-free versions only. I'm not anti-medicine—but I do believe in using it mindfully.</p>
+                                    
+                                    <div class="pros-cons">
+                                        <div class="pros">
+                                            <h5>✅ When They're Helpful:</h5>
+                                            <ul>
+                                                <li>Severe pain that natural remedies can't touch</li>
+                                                <li>High fever accompanying teething</li>
+                                                <li>When you need guaranteed relief</li>
+                                            </ul>
+                                        </div>
+                                        <div class="cons">
+                                            <h5>❌ Why We Limited Use:</h5>
+                                            <ul>
+                                                <li>Potential liver stress with frequent use</li>
+                                                <li>Artificial dyes and additives</li>
+                                                <li>Easy to become dependent</li>
+                                                <li>Masks symptoms rather than addressing root cause</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-review">
+                                    <h4>❌ Genexa Syringe Drama</h4>
+                                    <p>While Genexa is a cleaner brand, the syringe was a mess. It leaked everywhere and stressed me out during already chaotic moments.</p>
+                                    
+                                    <div class="pros-cons">
+                                        <div class="pros">
+                                            <h5>✅ What We Liked:</h5>
+                                            <ul>
+                                                <li>Cleaner ingredients than conventional brands</li>
+                                                <li>No artificial dyes</li>
+                                                <li>Organic and non-GMO</li>
+                                            </ul>
+                                        </div>
+                                        <div class="cons">
+                                            <h5>❌ The Problems:</h5>
+                                            <ul>
+                                                <li>Syringe leaked constantly</li>
+                                                <li>Wasted product and created mess</li>
+                                                <li>Added stress during difficult moments</li>
+                                                <li>More expensive for the hassle</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="mom-tips" class="mom-comments">
+                                <h3>💬 Real Mom Tips & Comments That Hit Home</h3>
+                                
+                                <div class="how-to-use">
+                                    <h4>📝 How I Used These Remedies</h4>
+                                    <div class="tip-box">
+                                        <p><strong>My Go-To Routine:</strong></p>
+                                        <ol>
+                                            <li>Start with frozen washcloth or teething toy</li>
+                                            <li>If still fussy after 20 minutes, try Camilia or Hyland's</li>
+                                            <li>For severe nights, Teeth Tamer was our lifesaver</li>
+                                            <li>Keep conventional medicine as absolute last resort</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="mom-comment">
+                                    "We were giving Tylenol way too often. Teeth Tamer changed everything."
+                                </div>
+                                
+                                <div class="mom-comment">
+                                    "My baby gagged on Genexa. Flavor matters!"
+                                </div>
+                                
+                                <div class="mom-comment">
+                                    "Camilia worked, but made her sleep too deep—it scared me."
+                                </div>
+                                
+                                <div class="mom-comment">
+                                    "Hyland's drops taste like water. My baby isn't scared of medicine anymore!"
+                                </div>
+
+                                <div class="mom-comment">
+                                    "Frozen breast milk in mesh feeders = game changer. My baby would chew on them for 30+ minutes!"
+                                </div>
+
+                                <div class="mom-comment">
+                                    "I wish I had known about these natural options with my first baby. Would have saved so much stress."
+                                </div>
+                            </div>
+
+                            <div id="final-thoughts" class="final-thoughts">
+                                <h3>🧠 Final Thoughts</h3>
+                                <p>Teething is tough. But you don't have to default to conventional meds every time. There are safe, effective swaps out there—and you're not alone in figuring it out.</p>
+                                
+                                <div class="key-takeaways">
+                                    <h4>🎯 Key Takeaways</h4>
+                                    <ul>
+                                        <li><strong>Start natural:</strong> Try frozen items and natural remedies first</li>
+                                        <li><strong>Have a plan:</strong> Know your go-to routine before the crying starts</li>
+                                        <li><strong>Quality matters:</strong> Invest in clean, effective products</li>
+                                        <li><strong>Trust your gut:</strong> You know your baby best</li>
+                                        <li><strong>It's temporary:</strong> This phase will pass (I promise!)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="author-note">
+                                    <p><strong>Remember:</strong> Always consult with your pediatrician before trying new remedies, especially if your baby has any health conditions or allergies. What worked for us might not work for everyone, and that's okay!</p>
+                                </div>
+                                
+                                <p>Whether you're trying celery sticks, homeopathic drops, or just surviving on coffee and cuddles, you're doing amazing. Trust your instincts, ask questions, and find what works for your baby.</p>
+        
+                            </div>
+
+                        <div class="blog-tags">
+                            <span class="tag">Baby Care</span>
+                            <span class="tag">Natural Remedies</span>
+                            <span class="tag">Teething</span>
+                            <span class="tag">Mom Life</span>
+                            <span class="tag">Product Reviews</span>
+                            <span class="tag">Low-Tox Living</span>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="blog-sidebar">
+                    <div class="related-posts">
+                        <h4>Related Posts</h4>
+                        <div class="related-posts-grid">
+                            <div class="related-post-card">
+                                <h5><a href="baby-wipes-diaper-cream-swaps.html">Baby Wipes & Diaper Cream Swaps That Actually Work</a></h5>
+                                <p>When I started my low-tox journey, baby products were first priority. Here are the wipes and diaper creams that actually work.</p>
+                            </div>
+                            <div class="related-post-card">
+                                <h5><a href="affordable-nontoxic-baby-laundry-detergents.html">Affordable Nontoxic Baby Laundry Detergents You'll Actually Love</a></h5>
+                                <p>Let's talk laundry! Those tiny clothes deserve better than Tide or Dreft. Here are the best low-tox options.</p>
+                            </div>
+                            <div class="related-post-card">
+                                <h5><a href="tart-cherry-juice-sleep-game-changer.html">The Magic of Tart Cherry Juice: My Sleep Game-Changer</a></h5>
+                                <p>How tart cherry juice improved my sleep quality and helped me wake up refreshed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+     <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-center">
+                    <p class="copyright">©2024 Life with Katelin</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/lifewithkatelin/" target="_blank" class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@katelinsmomlife?_t=ZT-8zwegDwnW7D&_r=1" target="_blank" class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:katelinwentworth@gmail.com" class="social-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
+                                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        
+                    </div>
+                     <p class="made-by">Made by <a href="https://thefreewebsitewizards.com/" target="_blank">The Free Website Wizards</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navMenu').classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const navMenu = document.getElementById('navMenu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!navMenu.contains(e.target) && !toggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
