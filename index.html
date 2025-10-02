@@ -13,9 +13,13 @@
             <div class="logo">
                 <h2>Life with Katelin</h2>
             </div>
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="index.html" class="active">About</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="links.html">Links</a></li>
                 <li><a href="start-here.html">Start Here</a></li>
@@ -92,13 +96,18 @@
     <script>
         function toggleMobileMenu() {
             const navMenu = document.getElementById('navMenu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
             navMenu.classList.toggle('active');
+            toggle.classList.toggle('active');
         }
 
         // Close mobile menu when clicking on a link
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', () => {
-                document.getElementById('navMenu').classList.remove('active');
+                const navMenu = document.getElementById('navMenu');
+                const toggle = document.querySelector('.mobile-menu-toggle');
+                navMenu.classList.remove('active');
+                toggle.classList.remove('active');
             });
         });
 
@@ -109,6 +118,7 @@
             
             if (!navMenu.contains(e.target) && !toggle.contains(e.target)) {
                 navMenu.classList.remove('active');
+                toggle.classList.remove('active');
             }
         });
     </script>

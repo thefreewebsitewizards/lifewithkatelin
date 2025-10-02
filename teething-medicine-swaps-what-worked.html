@@ -173,14 +173,101 @@
             }
             
             .blog-post {
-                padding: 2rem 1rem;
+                padding: 1.5rem 1rem;
+                max-width: 100%;
+            }
+            
+            .blog-content {
+                padding: 0;
+                margin: 0;
+                width: 100%;
             }
             
             .what-worked,
             .what-avoided,
             .mom-comments,
-            .final-thoughts {
+            .final-thoughts,
+            .product-review,
+            .highlight-box {
+                padding: 1rem 1.5rem;
+                margin: 1rem -1.5rem;
+                width: calc(100% + 3rem);
+                position: relative;
+                left: -1.5rem;
+                max-width: none;
+                box-sizing: border-box;
+            }
+            
+            .mom-comment {
+                padding: 1rem;
+                margin: 1rem 0;
+            }
+            
+            .benefits-list {
+                margin: 1rem 0;
+            }
+            
+            .table-of-contents {
                 padding: 1.5rem;
+                margin: 1.5rem 0;
+            }
+            
+            .container {
+                padding: 0 1rem;
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .blog-post {
+                padding: 0.5rem 0.25rem;
+                margin: 0;
+            }
+            
+            .blog-intro {
+                padding: 0 0.5rem;
+                margin-bottom: 2rem;
+                font-size: 1rem;
+            }
+            
+            .blog-content {
+                padding: 0 0.5rem;
+            }
+            
+            .what-worked,
+            .what-avoided,
+            .mom-comments,
+            .final-thoughts,
+            .product-review,
+            .highlight-box {
+                padding: 0.75rem 0.25rem;
+                margin: 0.5rem -0.5rem;
+                width: calc(100% + 1rem);
+                position: relative;
+                left: -0.5rem;
+            }
+            
+            .mom-comment {
+                padding: 0.8rem;
+                margin: 0.8rem 0;
+            }
+            
+            .benefits-list {
+                margin: 0.8rem 0;
+            }
+            
+            .benefits-list li {
+                padding: 0.6rem 0;
+                padding-left: 1.5rem;
+            }
+            
+            .table-of-contents {
+                padding: 1rem;
+                margin: 1rem 0;
+            }
+            
+            .table-of-contents ul {
+                padding-left: 1rem;
             }
         }
     </style>
@@ -192,7 +279,11 @@
                 <div class="logo">
                     <h2>Life with Katelin</h2>
                 </div>
-                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html">About</a></li>
                 <li><a href="blog.html" class="active">Blog</a></li>
@@ -213,7 +304,7 @@
                         <header class="blog-header">
                             <h1 class="blog-title">Teething & Medicine Swaps: What Worked for Us (and What Didn't)</h1>
                             <div class="blog-meta">
-                                <span>By Kristen</span> • <span>January 25, 2024</span> • <span>7 min read</span>
+                                <span>By Katelin</span> • <span>January 25, 2024</span> • <span>7 min read</span>
                             </div>
                         </header>
 
@@ -610,13 +701,18 @@
     <script>
         function toggleMobileMenu() {
             const navMenu = document.getElementById('navMenu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
             navMenu.classList.toggle('active');
+            toggle.classList.toggle('active');
         }
 
         // Close mobile menu when clicking on a link
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', () => {
-                document.getElementById('navMenu').classList.remove('active');
+                const navMenu = document.getElementById('navMenu');
+                const toggle = document.querySelector('.mobile-menu-toggle');
+                navMenu.classList.remove('active');
+                toggle.classList.remove('active');
             });
         });
 
@@ -627,6 +723,7 @@
             
             if (!navMenu.contains(e.target) && !toggle.contains(e.target)) {
                 navMenu.classList.remove('active');
+                toggle.classList.remove('active');
             }
         });
     </script>

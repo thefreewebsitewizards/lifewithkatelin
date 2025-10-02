@@ -9,7 +9,6 @@
     <style>
         /* Additional blog post specific styles */
         .blog-post {
-            max-width: 800px;
             margin: 0 auto;
             padding: 3rem 1.5rem;
         }
@@ -24,8 +23,9 @@
         .blog-title {
             font-size: 2.8rem;
             font-weight: 300;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             line-height: 1.3;
+            position: relative;
         }
         
         .blog-meta {
@@ -35,12 +35,16 @@
         }
         
         .blog-intro {
-            font-size: 1.2rem;
-            line-height: 1.7;
-            color: var(--text-medium);
-            margin-bottom: 3rem;
-            font-style: italic;
+            background: none;
+            padding: 0;
+            border-radius: 0;
+            margin-bottom: 2rem;
             text-align: center;
+            color: var(--text-medium);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            border: none;
+            box-shadow: none;
         }
         
         .blog-content h3 {
@@ -56,107 +60,220 @@
         }
         
         .product-section {
-            background: linear-gradient(135deg, var(--background-light) 0%, var(--accent-color) 100%);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2.5rem 0;
+            margin: 2rem 0;
+            padding: 0;
+            border: none;
+            background: none;
+            width: 100%;
+            max-width: none;
+        }
+        
+        .product-section h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            padding: 0;
+            border: none;
+            text-align: center;
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+            position: relative;
+            font-weight: 600;
+        }
+        
+        .product-section h3::before {
+            content: "🍼";
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
         }
         
         .product-review {
-            background: white;
-            border: 1px solid var(--border-light);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            transition: transform 0.2s ease;
+            background: none;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            margin: 1rem 0;
+            box-shadow: none;
+            transition: none;
         }
         
         .product-review:hover {
-            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            border-left-width: 6px;
         }
         
         .product-review h4 {
-            color: var(--text-dark);
-            margin-bottom: 1.5rem;
-            font-size: 1.4rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border: none;
+            padding-bottom: 0;
         }
         
         .pros-cons {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
             gap: 2rem;
-            margin: 2rem 0;
+            margin: 1rem 0;
+            flex-wrap: wrap;
         }
         
-        .pros {
-            background: linear-gradient(135deg, #f0fff4 0%, #e8f5e8 100%);
-            border-left: 4px solid var(--green-soft);
-            padding: 1.5rem;
-            border-radius: 0 8px 8px 0;
+        .pros, .cons {
+            flex: 1;
+            min-width: 250px;
+            padding: 0;
+            border-radius: 0;
+            background: none;
+            border: none;
+            margin-bottom: 0.5rem;
         }
         
-        .cons {
-            background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
-            border-left: 4px solid var(--rose-accent);
-            padding: 1.5rem;
-            border-radius: 0 8px 8px 0;
+        .pros strong {
+            color: #2d5016;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .pros strong:before {
+            content: "✅";
+            font-size: 1.2rem;
+        }
+        
+        .cons strong {
+            color: #8b1538;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cons strong:before {
+            content: "⚠️";
+            font-size: 1.2rem;
+        }
+        
+        .pros ul, .cons ul {
+            margin: 0;
+            padding-left: 2rem;
+        }
+        
+        .pros li {
+            color: #2d5016;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        .cons li {
+            color: #8b1538;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
         }
         
         .avoid-section {
-            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
-            border-left: 4px solid #ffa726;
-            padding: 2rem;
-            margin: 2.5rem 0;
-            border-radius: 0 12px 12px 0;
+            background: none;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            margin: 1.5rem 0;
+            box-shadow: none;
+        }
+        
+        .avoid-section h3 {
+            color: #ff6b35;
+            margin-bottom: 0.5rem;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .avoid-section ul {
+            margin: 0.5rem 0;
+            padding-left: 2rem;
+        }
+        
+        .avoid-section li {
+            color: #d63031;
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+            font-weight: 500;
         }
         
         .mom-comments {
-            background: var(--background-cream);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2.5rem 0;
+            background: none;
+            border-radius: 0;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        
+        .mom-comments h3 {
+            background: none;
+            color: var(--primary-color);
+            padding: 0;
+            margin: 0 0 1rem 0;
+            border-radius: 0;
+            text-align: center;
+            font-size: 1.6rem;
+            box-shadow: none;
         }
         
         .mom-comment {
-            background: white;
-            border-left: 3px solid var(--accent-color);
-            padding: 1rem 1.5rem;
-            margin: 1rem 0;
-            border-radius: 0 8px 8px 0;
+            background: none;
+            border: none;
+            padding: 0.5rem 0;
+            margin: 0.5rem 0;
+            border-radius: 0;
             font-style: italic;
             position: relative;
+            font-size: 1.1rem;
+            color: var(--text-medium);
+            line-height: 1.7;
         }
         
         .mom-comment:before {
-            content: "";
-            font-size: 2rem;
-            color: var(--accent-color);
+            content: "💬";
+            font-size: 1.5rem;
             position: absolute;
-            left: 0.5rem;
-            top: -0.5rem;
-            opacity: 0.3;
+            left: -0.5rem;
+            top: 1rem;
+            background: none;
+            padding: 0;
+            border-radius: 0;
         }
         
         .final-thoughts {
-            border: 1px solid var(--border-light);
-            color: var(--text-medium);
-            padding: 2.5rem;
-            margin: 3rem 0;
+            border: none;
+            background: none;
+            color: var(--text-dark);
+            padding: 0;
+            margin: 2rem 0;
             text-align: center;
+            border-radius: 0;
+            box-shadow: none;
         }
         
         .final-thoughts h3 {
-            color: var(--text-dark);
-            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
         }
         
         .final-thoughts p {
-            color: var(--text-medium);
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .final-thoughts p:last-child {
             margin-bottom: 0;
+            font-weight: 600;
+            color: var(--primary-color);
         }
         
         .blog-tags {
@@ -209,22 +326,145 @@
             font-size: 0.95rem;
         }
         
+        /* Mobile First Responsive Design */
+        
+        /* Enhanced mobile touch and accessibility */
         @media (max-width: 768px) {
-            .blog-title {
-                font-size: 2.2rem;
+            /* Better touch targets */
+            .back-to-blog {
+                padding: 0.75rem 0;
+                display: inline-block;
+                min-height: 44px;
+                line-height: 1.4;
             }
             
-            .blog-intro {
-                font-size: 1.1rem;
+            /* Improved readability */
+            body {
+                -webkit-text-size-adjust: 100%;
+                text-size-adjust: 100%;
             }
             
-            .blog-post {
-                padding: 2rem 1rem;
+            /* Better scrolling on mobile */
+            .blog-content {
+                overflow-wrap: br 0.5remeak-word;
+                word-wrap: break-word;
+                hyphens: auto;
+                padding: 0 0.5rem;
+            }
+            
+            /* Mobile-optimized product sections */
+            .product-section {
+                margin: 1rem -1.5rem;
+                padding: 1rem 1.5rem;
+                width: calc(100% + 3rem);
+                position: relative;
+                left: -1.5rem;
+                max-width: none;
+            }
+            
+            .product-review {
+                margin: 0.75rem -1.5rem;
+                padding: 1rem 1.5rem;
+                width: calc(100% + 3rem);
+                position: relative;
+                left: -1.5rem;
+                max-width: none;
             }
             
             .pros-cons {
-                grid-template-columns: 1fr;
+                flex-direction: column;
                 gap: 1rem;
+                margin: 0.75rem 0;
+            }
+            
+            .pros, .cons {
+                width: 100%;
+                min-width: auto;
+                margin-bottom: 0.5rem;
+            }
+            
+            /* Enhanced list styling for mobile */
+            .pros ul, .cons ul {
+                list-style-position: outside;
+            }
+            
+            .pros li, .cons li {
+                padding-left: 0.25rem;
+            }
+            
+            /* Better spacing for avoid section */
+            .avoid-section ul {
+                margin: 1rem 0;
+                padding-left: 1.5rem;
+            }
+            
+            .avoid-section li {
+                margin-bottom: 0.75rem;
+                line-height: 1.6;
+            }
+            
+            /* Mobile-optimized mom comments */
+            .mom-comment:before {
+                display: none; /* Remove decorative quote for mobile */
+            }
+            
+            /* Better container margins */
+            .container {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .blog-post {
+                padding: 0.5rem 0.25rem;
+                max-width: 100%;
+                margin: 0;
+            }
+            
+            .blog-title {
+                font-size: 1.8rem;
+                line-height: 1.2;
+                margin-bottom: 0.75rem;
+            }
+            
+            .blog-intro {
+                font-size: 1rem;
+                line-height: 1.6;
+                margin-bottom: 2rem;
+                padding: 0;
+            }
+            
+            .blog-meta {
+                font-size: 0.8rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .blog-header {
+                margin-bottom: 2rem;
+                padding-bottom: 1.5rem;
+            }
+            
+            .blog-content {
+                padding: 0;
+                margin: 0;
+            }
+            
+            .blog-content h3 {
+                font-size: 1.3rem;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+            }
+            
+            .blog-content p {
+                margin-bottom: 1.5rem;
+                line-height: 1.7;
+            }
+            
+            .pros-cons {
+                flex-direction: column;
+                gap: 1rem;
+                margin: 1rem 0;
             }
             
             .product-review,
@@ -232,7 +472,225 @@
             .avoid-section,
             .mom-comments,
             .final-thoughts {
-                padding: 1.5rem;
+                padding: 0.75rem 0.25rem;
+                margin: 0.5rem -0.5rem;
+                border-radius: 6px;
+                width: calc(100% + 1rem);
+                position: relative;
+                left: -0.5rem;
+                box-sizing: border-box;
+            }
+            
+            .product-review h4 {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .pros, .cons {
+                padding: 0.75rem;
+                border-radius: 6px;
+                width: 100%;
+                box-sizing: border-box;
+                min-width: auto;
+            }
+            
+            .pros ul, .cons ul {
+                margin: 0.5rem 0;
+                padding-left: 1.2rem;
+            }
+            
+            .pros li, .cons li {
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+            
+            .discount-code {
+                padding: 0.75rem 1rem;
+                font-size: 0.9rem;
+                margin: 0.75rem 0;
+            }
+            
+            .ingredient-highlight {
+                padding: 0.75rem 1rem;
+                font-size: 0.85rem;
+                margin: 0.75rem 0;
+            }
+            
+            .mom-comment {
+                padding: 0.75rem 1rem;
+                margin: 0.75rem 0;
+                font-size: 0.9rem;
+            }
+            
+            .blog-tags {
+                margin-top: 2rem;
+                padding-top: 1.5rem;
+            }
+            
+            .tag {
+                padding: 0.3rem 0.8rem;
+                font-size: 0.8rem;
+                margin-right: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .back-to-blog {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                font-size: 0.9rem;
+            }
+            
+            /* Enhanced product sections for mobile */
+            .product-section h3 {
+                text-align: center;
+                padding-bottom: 0.75rem;
+                border-bottom: 2px solid rgba(255,255,255,0.3);
+                margin-bottom: 1.5rem;
+            }
+            
+            .product-review {
+                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                border: 1px solid rgba(0,0,0,0.1);
+            }
+            
+            .product-review:hover {
+                transform: none; /* Disable hover transform on mobile */
+            }
+            
+            /* Better visual separation */
+            .avoid-section h3,
+            .mom-comments h3,
+            .final-thoughts h3 {
+                text-align: center;
+                margin-bottom: 1.25rem;
+            }
+            
+            /* Improved final thoughts section */
+            .final-thoughts {
+                text-align: left;
+                border-radius: 8px;
+                border: 2px solid var(--border-light);
+            }
+            
+            .final-thoughts h3 {
+                text-align: center;
+                color: var(--primary-color);
+            }
+            
+            /* Better mom comments layout */
+             .mom-comments h3 {
+                 color: var(--primary-color);
+                 margin-bottom: 1.5rem;
+             }
+            
+             /* Enhanced pros/cons for mobile */
+             .pros strong, .cons strong {
+                 display: block;
+                 margin-bottom: 0.75rem;
+                 font-size: 1rem;
+                 color: var(--text-dark);
+             }
+             
+             .pros {
+                 border-left-width: 3px;
+             }
+             
+             .cons {
+                 border-left-width: 3px;
+             }
+             
+             /* Mobile navigation improvements */
+            .nav-container {
+                padding: 0 1rem;
+                border: none;
+            }
+             
+             .mobile-menu-toggle {
+                 padding: 0.5rem;
+                 min-height: 44px;
+                 min-width: 44px;
+             }
+             
+             /* Ensure proper spacing around main content */
+             main {
+                 padding-top: 1rem;
+             }
+            }
+        
+        @media (min-width: 481px) and (max-width: 768px) {
+            .blog-post {
+                padding: 1.5rem 1rem;
+            }
+            
+            .blog-title {
+                font-size: 2rem;
+                line-height: 1.25;
+            }
+            
+            .blog-intro {
+                font-size: 1.05rem;
+                line-height: 1.65;
+                margin-bottom: 2.5rem;
+            }
+            
+            .blog-content h3 {
+                font-size: 1.4rem;
+                margin-top: 2.25rem;
+                margin-bottom: 1.25rem;
+            }
+            
+            .pros-cons {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+                margin: 1.75rem 0;
+            }
+            
+            .product-review,
+            .product-section,
+            .avoid-section,
+            .mom-comments,
+            .final-thoughts {
+                padding: 1.25rem;
+                margin: 1.75rem 0;
+            }
+            
+            .product-review h4 {
+                font-size: 1.25rem;
+                margin-bottom: 1.25rem;
+            }
+            
+            .pros, .cons {
+                padding: 1.25rem;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .blog-post {
+                padding: 2.5rem 1.25rem;
+            }
+            
+            .blog-title {
+                font-size: 2.4rem;
+            }
+            
+            .blog-intro {
+                font-size: 1.15rem;
+            }
+            
+            .pros-cons {
+                gap: 1.5rem;
+            }
+            
+            .product-review,
+            .product-section,
+            .avoid-section,
+            .mom-comments,
+            .final-thoughts {
+                padding: 1.75rem;
             }
         }
     </style>
@@ -241,16 +699,20 @@
     <header>
         <nav>
             <div class="nav-container">
-                <div class="logo">
-                    <h2>Life with Katelin</h2>
-                </div>
-                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
-                <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html">About</a></li>
-                <li><a href="blog.html" class="active">Blog</a></li>
-                <li><a href="links.html">Links</a></li>
-                <li><a href="start-here.html">Start Here</a></li>
-            </ul>
+                    <div class="logo">
+                        <h2>Life with Katelin</h2>
+                    </div>
+                    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="links.html">Links</a></li>
+                    <li><a href="start-here.html">Start Here</a></li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -261,11 +723,11 @@
             
             <div class="blog-layout">
                 <div class="blog-main">
-                    <article class="blog-post">
+                    <article class="blog-post" data-category="baby-wipes">
                         <header class="blog-header">
                             <h1 class="blog-title">Baby Wipes & Diaper Cream Swaps That Actually Work</h1>
                             <div class="blog-meta">
-                                <span>By Kristen</span> • <span>February 1, 2024</span> • <span>8 min read</span>
+                                <span>By Katelin</span> • <span>February 1, 2024</span> • <span>8 min read</span>
                             </div>
                         </header>
 
@@ -274,10 +736,10 @@
                         </div>
 
                         <div class="blog-content">
-                    <p>Here's what I've tried, loved, and recommend to other moms looking for affordable, effective swaps.</p>
+                    <p>Here's wha🧻 t I've tried, loved, and recommend to other moms looking for affordable, effective swaps.</p>
 
                     <div class="product-section">
-                        <h3>🧻 Wipes That Pass the Test</h3>
+                        <h3>Wipes That Pass the Test</h3>
                         
                         <div class="product-review">
                             <h4>✅ WaterWipes</h4>
@@ -530,13 +992,18 @@
     <script>
         function toggleMobileMenu() {
             const navMenu = document.getElementById('navMenu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
             navMenu.classList.toggle('active');
+            toggle.classList.toggle('active');
         }
 
         // Close mobile menu when clicking on a link
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', () => {
-                document.getElementById('navMenu').classList.remove('active');
+                const navMenu = document.getElementById('navMenu');
+                const toggle = document.querySelector('.mobile-menu-toggle');
+                navMenu.classList.remove('active');
+                toggle.classList.remove('active');
             });
         });
 
@@ -547,8 +1014,10 @@
             
             if (!navMenu.contains(e.target) && !toggle.contains(e.target)) {
                 navMenu.classList.remove('active');
+                toggle.classList.remove('active');
             }
         });
     </script>
 </body>
 </html>
+        

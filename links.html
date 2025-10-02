@@ -14,7 +14,11 @@
                 <div class="logo">
                     <h2>Life with Katelin</h2>
                 </div>
-                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html">About</a></li>
                 <li><a href="blog.html">Blog</a></li>
@@ -169,11 +173,21 @@
         .links-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            grid-auto-rows: 20px;
+            grid-auto-rows: 40px;
             gap: 1.5rem;
             max-width: 1000px;
             margin: 0 auto;
             padding: 0 1rem;
+        }
+        
+        /* Improved content section for mobile */
+        .content-section {
+            padding: 2rem 0 4rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
         .link-item {
@@ -297,17 +311,44 @@
             color: var(--accent-color);
         }
 
-        /* Masonry effect with different heights */
-        .link-item:nth-child(3n+1) {
+        /* Masonry effect with different heights - All screen sizes */
+        .link-item:nth-child(4n+1) {
+            grid-row-end: span 5;
+        }
+        
+        .link-item:nth-child(4n+2) {
             grid-row-end: span 6;
         }
         
-        .link-item:nth-child(3n+2) {
-            grid-row-end: span 8;
+        .link-item:nth-child(4n+3) {
+            grid-row-end: span 4;
         }
         
-        .link-item:nth-child(3n+3) {
-            grid-row-end: span 7;
+        .link-item:nth-child(4n+4) {
+            grid-row-end: span 5;
+        }
+        
+        /* Enhanced masonry for larger screens */
+        @media (min-width: 769px) {
+            .links-container {
+                grid-auto-rows: 30px;
+            }
+            
+            .link-item:nth-child(4n+1) {
+                grid-row-end: span 6;
+            }
+            
+            .link-item:nth-child(4n+2) {
+                grid-row-end: span 8;
+            }
+            
+            .link-item:nth-child(4n+3) {
+                grid-row-end: span 5;
+            }
+            
+            .link-item:nth-child(4n+4) {
+                grid-row-end: span 7;
+            }
         }
 
         /* Special styling for certain items */
@@ -316,34 +357,245 @@
             border-width: 2px;
         }
 
-        @media (max-width: 768px) {
+        /* Mobile First Responsive Design */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+                text-align: center;
+                margin-bottom: 0.5rem;
+            }
+            
+            .section-header p {
+                font-size: 0.9rem;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            
             .links-container {
                 grid-template-columns: 1fr;
-                gap: 1rem;
+                grid-auto-rows: 35px;
+                gap: 1.25rem;
+                padding: 0;
+                margin-top: 1rem;
+            }
+            
+            .link-item {
+                padding: 1.5rem 1.25rem;
+                border-radius: 16px;
+                margin: 0 0.25rem;
+            }
+
+            .link-item h4 {
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+                line-height: 1.4;
+                text-align: center;
+            }
+            
+            .link-btn {
+                font-size: 1rem;
+                padding: 0.75rem 1.5rem;
+                border-radius: 8px;
+                display: block;
+                text-align: center;
+                margin-top: 1rem;
+                min-height: 44px;
+                line-height: 1.2;
+                font-weight: 600;
+            }
+        }
+
+        @media (min-width: 481px) and (max-width: 768px) {
+            .container {
+                padding: 0 1.25rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+                text-align: center;
+            }
+            
+            .section-header p {
+                text-align: center;
+                margin-bottom: 2.5rem;
+            }
+            
+            .links-container {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 38px;
+                gap: 1.5rem;
                 padding: 0 0.5rem;
             }
             
             .link-item {
-                padding: 1.25rem;
-                grid-row-end: auto !important;
+                padding: 1.75rem 1.5rem;
+                border-radius: 14px;
             }
 
             .link-item h4 {
-                font-size: 1.1rem;
+                font-size: 1.25rem;
+                margin-bottom: 1rem;
+                text-align: center;
+            }
+            
+            .link-btn {
+                font-size: 1rem;
+                padding: 0.6rem 1.25rem;
+                border-radius: 8px;
+                display: block;
+                text-align: center;
+                margin-top: 0.75rem;
+                min-height: 44px;
+                line-height: 1.3;
             }
         }
 
         @media (min-width: 769px) and (max-width: 1024px) {
             .links-container {
                 grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 32px;
+                gap: 1.75rem;
+            }
+            
+            .link-item {
+                padding: 1.5rem;
+            }
+            
+            .link-item h4 {
+                font-size: 1.2rem;
+            }
+            
+            .link-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.95rem;
             }
         }
 
         @media (min-width: 1025px) {
             .links-container {
                 grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
             }
         }
+        
+        /* Enhanced touch targets for mobile */
+         @media (max-width: 768px) {
+             .content-section {
+                 padding: 1.5rem 0 3rem;
+             }
+             
+             .section-header {
+                 margin-bottom: 2rem;
+             }
+             
+             .link-item {
+                 cursor: pointer;
+                 transition: all 0.3s ease;
+                 position: relative;
+                 overflow: hidden;
+             }
+             
+             .link-item:active {
+                 transform: scale(0.98);
+             }
+             
+             .link-item:focus-within {
+                 outline: 2px solid var(--accent-color);
+                 outline-offset: 2px;
+             }
+             
+             .link-btn:hover,
+             .link-btn:focus {
+                 background-color: rgba(255,255,255,0.5);
+                 border-color: rgba(255,255,255,0.7);
+                 transform: none;
+                 outline: none;
+             }
+             
+             /* Improve readability on mobile */
+             .link-item h4 {
+                 text-shadow: 0 2px 4px rgba(255,255,255,0.9);
+                 font-weight: 600;
+                 word-wrap: break-word;
+                 hyphens: auto;
+             }
+             
+             .link-btn {
+                 text-shadow: 0 1px 3px rgba(255,255,255,0.9);
+                 background-color: rgba(255,255,255,0.4);
+                 border: 2px solid rgba(255,255,255,0.6);
+                 backdrop-filter: blur(2px);
+                 text-decoration: none;
+                 transition: all 0.2s ease;
+                 -webkit-tap-highlight-color: transparent;
+             }
+             
+             /* Improve contrast for better accessibility */
+             .link-item::before {
+                 background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.5) 100%);
+             }
+         }
+         
+         /* Extra small devices optimization */
+         @media (max-width: 360px) {
+             .container {
+                 padding: 0 0.75rem;
+             }
+             
+             .links-container {
+                 gap: 1rem;
+                 margin: 0 -0.25rem;
+             }
+             
+             .link-item {
+                 padding: 1.25rem 1rem;
+                 margin: 0;
+             }
+             
+             .link-item h4 {
+                 font-size: 1.1rem;
+                 line-height: 1.3;
+             }
+             
+             .link-btn {
+                 padding: 0.6rem 1.25rem;
+                 font-size: 0.95rem;
+             }
+         }
     </style>
+
+    <script>
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            navMenu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navMenu = document.getElementById('navMenu');
+                const toggle = document.querySelector('.mobile-menu-toggle');
+                navMenu.classList.remove('active');
+                toggle.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const navMenu = document.getElementById('navMenu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!navMenu.contains(e.target) && !toggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+                toggle.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
